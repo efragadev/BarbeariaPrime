@@ -31,3 +31,5 @@ Projeto feito com HTML, CSS e JavaScript para praticar selecao de servicos em um
 2. Clique em `Adicionar` nos servicos desejados.
 3. Veja o total ser atualizado.
 4. Clique em `Finalizar selecao` para concluir e limpar o pedido.
+
+
