@@ -1,0 +1,431 @@
+:root {
+  --bg-escuro: #101816;
+  --bg-secundario: #1a2622;
+  --bg-card: #1f2e2a;
+  --bg-claro: #f3efe7;
+  --bg-claro-secundario: #e5dfd3;
+  --texto-claro: #f6f3ee;
+  --texto-suave: #c8d3cf;
+  --texto-escuro: #2b2f2d;
+  --accento: #2f6b5f;
+  --accento-hover: #3c8577;
+  --accento-suave: #8fc3b4;
+  --detalhe: #b9c7b2;
+  --sucesso: #4d8a63;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(180deg, var(--bg-escuro) 0%, #0c1312 100%);
+  color: var(--texto-claro);
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--bg-claro);
+  letter-spacing: 4px;
+  margin-bottom: 0.8rem;
+  text-transform: uppercase;
+}
+
+.banner {
+  background:
+    linear-gradient(rgba(16, 24, 22, 0.82), rgba(16, 24, 22, 0.92)),
+    linear-gradient(135deg, #243a35, #131b19 60%);
+  color: var(--texto-claro);
+  text-align: center;
+  padding: 3.5rem 1rem;
+  border-bottom: 1px solid rgba(47, 107, 95, 0.35);
+}
+
+.banner-content {
+  width: 90%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.selo {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid rgba(47, 107, 95, 0.45);
+  border-radius: 999px;
+  color: var(--accento-suave);
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: rgba(255, 255, 255, 0.04);
+}
+
+.banner-content h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.4rem;
+  margin-bottom: 1rem;
+}
+
+.descricao-banner {
+  max-width: 650px;
+  margin: 0 auto 1.5rem;
+  color: var(--texto-suave);
+  font-size: 1.05rem;
+}
+
+.destaques-topo {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  margin-bottom: 1.8rem;
+}
+
+.destaques-topo span {
+  padding: 0.6rem 0.9rem;
+  border-radius: 999px;
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 0.9rem;
+}
+
+nav a {
+  display: inline-block;
+  color: var(--texto-claro);
+  text-decoration: none;
+  margin: 0.3rem;
+  padding: 0.7rem 1.2rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--accento), #25554c);
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  background: linear-gradient(135deg, var(--accento-hover), #2f6c61);
+}
+
+main {
+  width: 85%;
+  max-width: 1100px;
+  margin: 2.5rem auto;
+}
+
+.categoria {
+  margin-bottom: 2rem;
+}
+
+.cabecalho-secao {
+  margin-bottom: 1.5rem;
+}
+
+.cabecalho-secao p {
+  color: var(--accento-suave);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.categoria h2,
+#pedido h2,
+#contato h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.lista-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.2rem;
+}
+
+.servico {
+  background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-secundario) 100%);
+  color: var(--texto-claro);
+  border-radius: 16px;
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  border: 1px solid rgba(47, 107, 95, 0.16);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.22);
+  transition: 0.3s;
+}
+
+.servico:hover {
+  transform: translateY(-6px);
+}
+
+.servico.selecionado {
+  border-color: rgba(95, 143, 115, 0.7);
+  box-shadow: 0 14px 28px rgba(95, 143, 115, 0.2);
+}
+
+.destaque-combo {
+  position: relative;
+  border: 1px solid rgba(143, 195, 180, 0.45);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.28);
+}
+
+.destaque-combo::before {
+  content: "Mais vantajoso";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #8fc3b4, #5f8f73);
+  color: #0f1a17;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.destaque-combo .imagem-servico {
+  background: linear-gradient(135deg, #46776d, #2f564f);
+}
+
+.destaque-combo .preco {
+  font-size: 1.45rem;
+  color: #b7ead8;
+}
+
+.destaque-combo .adicionar {
+  background: linear-gradient(135deg, #5f8f73, #3c6e58);
+}
+
+.destaque-combo .adicionar:hover {
+  background: linear-gradient(135deg, #72a487, #4d7f68);
+}
+
+.cabecalho-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.imagem-servico {
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  height: 180px;
+  background: linear-gradient(135deg, #31574f, #243f3a);
+  color: var(--bg-claro);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Playfair Display", serif;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+.tipo-servico {
+  display: inline-block;
+  padding: 0.35rem 0.8rem;
+  border-radius: 999px;
+  background-color: rgba(47, 107, 95, 0.16);
+  color: var(--accento-suave);
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tempo-servico {
+  color: var(--detalhe);
+  font-size: 0.82rem;
+}
+
+.servico h3 {
+  font-family: "Playfair Display", serif;
+  margin-bottom: 0.6rem;
+  color: var(--bg-claro);
+}
+
+.servico p {
+  color: var(--texto-suave);
+  font-size: 0.95rem;
+  min-height: 60px;
+}
+
+.beneficios {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 1.2rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.beneficios li {
+  color: var(--texto-claro);
+  font-size: 0.9rem;
+  padding-left: 0.8rem;
+  border-left: 2px solid rgba(47, 107, 95, 0.35);
+}
+
+.rodape-servico {
+  margin-top: auto;
+  margin-bottom: 1rem;
+}
+
+.label-preco {
+  display: block;
+  color: var(--texto-suave);
+  font-size: 0.82rem;
+  margin-bottom: 0.2rem;
+}
+
+.preco {
+  display: block;
+  font-weight: bold;
+  color: var(--accento-suave);
+  font-size: 1.25rem;
+}
+
+.adicionar,
+#finalizar-pedido {
+  background: linear-gradient(135deg, var(--accento), #25554c);
+  color: var(--texto-claro);
+  border: none;
+  padding: 0.7rem 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.adicionar {
+  width: 100%;
+}
+
+.adicionar:disabled,
+#finalizar-pedido:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.adicionar:hover,
+#finalizar-pedido:hover {
+  background: linear-gradient(135deg, var(--accento-hover), #2f6c61);
+}
+
+.adicionar.selecionado {
+  background: linear-gradient(135deg, var(--sucesso), #4d745d);
+}
+
+#pedido {
+  background: linear-gradient(180deg, var(--bg-claro) 0%, var(--bg-claro-secundario) 100%);
+  color: var(--texto-escuro);
+  padding: 1.5rem;
+  border-radius: 16px;
+  border: 1px solid rgba(47, 107, 95, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+.texto-pedido {
+  margin-bottom: 1rem;
+  color: #5a5560;
+}
+
+#lista-pedido {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+}
+
+#lista-pedido li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #cfc5ba;
+}
+
+#total {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.mensagem {
+  margin-top: 1rem;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: 0.3s;
+}
+
+.mensagem.mostrar {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mensagem.sucesso {
+  background-color: #d7ecdf;
+  color: #244936;
+}
+
+.mensagem.aviso {
+  background-color: #e1efe9;
+  color: #245247;
+}
+
+#contato {
+  text-align: center;
+  margin-top: 2rem;
+  padding: 2rem 1rem;
+  border: 1px solid rgba(47, 107, 95, 0.18);
+  border-radius: 16px;
+  background: linear-gradient(180deg, #1b2824 0%, #121b18 100%);
+}
+
+.redes-sociais a {
+  display: inline-block;
+  background-color: var(--bg-claro);
+  color: var(--texto-escuro);
+  padding: 0.6rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  margin: 0.5rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.redes-sociais a:hover {
+  background-color: var(--accento);
+  color: var(--texto-claro);
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--accento), #25554c);
+  color: var(--texto-claro);
+  margin-top: 2rem;
+}
+
+footer a{
+  color: var(--texto-claro);
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2.3rem;
+  }
+
+  main {
+    width: 90%;
+  }
+
+  .destaques-topo {
+    flex-direction: column;
+  }
+
+  .destaque-combo::before {
+    top: 12px;
+    right: 12px;
+    font-size: 0.68rem;
+  }
+}
